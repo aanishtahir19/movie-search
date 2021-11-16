@@ -1,0 +1,19 @@
+
+#movie-list::-webkit-scrollbar{
+    display: none;
+}
+#image-container-overlay{
+    position: absolute;
+    width: 1005%;
+    top:0;
+    height: 30px;
+    background-color: black;
+    opacity: 0.4;
+    z-index: 2;
+}
+#movie-tile{
+    flex-basis: 200px;
+    .image-container{
+        height: 250px;
+    }
+}
