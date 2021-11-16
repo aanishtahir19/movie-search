@@ -24,7 +24,7 @@ export const getMovieDetail = async(id)=>{
     apikey: 'f21935f6',
     i: id,
   };
-  const url = new URL('http://www.omdbapi.com/');
+  const url = new URL('https://www.omdbapi.com/');
   Object.keys(params).forEach((key) => {
     url.searchParams.append(key, params[key]);
   });
