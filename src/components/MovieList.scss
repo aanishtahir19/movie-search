@@ -2,6 +2,10 @@
 #movie-list::-webkit-scrollbar{
     display: none;
 }
+#movie-list{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
 #image-container-overlay{
     position: absolute;
     width: 1005%;

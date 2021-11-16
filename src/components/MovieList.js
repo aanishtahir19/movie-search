@@ -1,6 +1,6 @@
 import './MovieList.scss';
 import { getMovieDetail } from '../Utils/api';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import MovieDetail from './MovieDetail';
 import styled from 'styled-components';
 
@@ -19,6 +19,22 @@ function MovieList({ movies }) {
       setLoadingDetail(false);
     }
   };
+
+ useEffect(()=>{
+    // Mouse wheel
+  const scrollContainer = document.querySelector("#movie-list")
+  scrollContainer.addEventListener("wheel",(evt)=>{
+    evt.preventDefault();
+    // console.log(scrollContainer.scrollLeft)
+    scrollContainer.scrollLeft += evt.deltaY;
+    scrollContainer.scrollLeft += evt.deltaX;
+  })
+
+
+ }, [])
+
+
+  // 
   return (
     // <div className='container mx-auto'>
     <div className=' px-5 mt-20 md:px-8 xl:px-11'>
