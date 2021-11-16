@@ -36,6 +36,5 @@
   },
   "jest": {
     "testEnvironment": "jsdom"
-  },
-  "main": "index.js"
+  }
 }
